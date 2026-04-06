@@ -1,5 +1,6 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
+from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import IntegrityError
@@ -25,7 +26,7 @@ async def validation_exception_handler(_: Request, exc: RequestValidationError):
             "success": False,
             "error": "VALIDATION_ERROR",
             "message": "Invalid request payload",
-            "details": exc.errors(),
+            "details":  jsonable_encoder(exc.errors()),
         },
     )
 
