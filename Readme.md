@@ -81,3 +81,7 @@ Build a REST API for managing financial records with Role-Based Access Control (
 - Users are assigned roles: `viewer` (read-only), `analyst` (manage own records), `admin` (full access)
 - Records use a `deleted_at` timestamp for soft deletions to ensure data retention
 - Seed the database with `python seed.py` which will insert dummy users (admin, analyst, viewer) and records
+- Used descriptive names and less comments
+- FastAPI and pydentic for clear stucture of json request and responses and it visualises through Swagger UI
+- SQLAlchemy ORM for simplecity and native integration with python programming langauge.
+- Not good at testing but created some using gpt

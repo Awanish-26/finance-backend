@@ -23,6 +23,8 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
+create finance.db in root directory
+
 3. Seed demo data:
 
 ```bash
